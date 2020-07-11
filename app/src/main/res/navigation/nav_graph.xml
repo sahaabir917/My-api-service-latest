@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marsfragment">
+
+    <fragment
+        android:id="@+id/marsfragment"
+        android:name="com.example.marsapi.Marsfragment"
+        android:label="fragment_marsfragment"
+        tools:layout="@layout/fragment_marsfragment" >
+        <action
+            android:id="@+id/action_marsfragment_to_footballFragment"
+            app:destination="@id/footballFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/footballFragment"
+        android:name="com.example.marsapi.FootballFragment"
+        android:label="FootballFragment" >
+        <action
+            android:id="@+id/action_footballFragment_to_newFragment"
+            app:destination="@id/newFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.example.marsapi.NewFragment"
+        android:label="fragment_new"
+        tools:layout="@layout/fragment_new" />
+
+
+</navigation>
